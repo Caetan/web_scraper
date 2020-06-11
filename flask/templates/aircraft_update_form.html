@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Update aircraft</h3>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.operator.label }}<br>
+            {{ form.operator }}
+        </p>
+        <p>
+            {{ form.model.label }}<br>
+            {{ form.model }}
+        </p>
+        <p>
+            {{ form.registration.label }}<br>
+            {{ form.registration }}
+        </p>
+        <p>
+            {{ form.cn_fl.label }}<br>
+            {{ form.cn_fl }}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
+{% endblock %}

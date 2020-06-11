@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Aicrafts</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='mini-default.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Aircrafts</h1>
+            <hr>
+            {# Comments in templates are also possible #}
+            {% for aircraft in aircrafts %}
+                <li><b>OPERATOR: </b><a href="{{ url_for('aircraft', aircraft_id=aircraft.id) }}">{{ aircraft.operator }}</a><br>  <!-- aqui pone enlace con nombre para siguiente pagina con info-->
+                <br>
+            {% endfor %}
+            <hr>
+            <a href="{{ url_for('new_aircraft') }}">New Aircraft</a>
+            <a href="{{ url_for('find_aircraft') }}">Search</a>
+            <a href="{{ url_for('index') }}">Back</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+#sudo pip install pipenv
+#sudo pipenv --rm
+#sudo pipenv --three  // Creates environment and change 3.7 python at Pipfile.lock
+#pipenv --venv //To check if the venv is created
+
+sudo pipenv install requests
+sudo pipenv install BeautifulSoup4
+
+
+
+pipenv run python3 single-thread-all.py
+pipenv run python3 multi-thread-all.py
+pipenv run python3 single-thread-part.py
+pipenv run python3 multi-thread-part.py

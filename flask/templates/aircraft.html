@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>{{ aircraft.operator }}</h3>
+    <p><b><li>ID:</b> {{ aircraft.id }}</p>
+    <p><b><li>MODEL:</b> {{ aircraft.model }}</p>
+    <p><b><li>REGISTRATION:</b> {{ aircraft.registration }}</p>
+    <p><b><li>CN/FL:</b> {{ aircraft.cn_fl }}</p><br>
+    <a href="{{ url_for('index') }}">Back</a>
+    <a href="{{ url_for('del_aircraft', aircraft_id=aircraft.id) }}">Delete</a>
+    <a href="{{ url_for('update_aircraft', aircraft_id=aircraft.id) }}">Update</a>
+{% endblock %}
